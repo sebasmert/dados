@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Random random = new Random();
+        int dad1=0,dad2=0,sumdad1=0,sumdad2=0;
+        int sumtol = 0;
+        do {
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+            dad1 = random.nextInt(6) + 1;
+            dad2 = random.nextInt(6) + 1;
+            sumdad1 += dad1;
+            sumdad2 += dad2;
+            System.out.println("Dado 1: " + dad1 + "| dado2: " + dad2);
+
+        }while(dad1 != dad2);{
+            System.out.println(" ");
+            if (sumdad1 > sumdad2) {
+                System.out.println("El dado ganador es el dado numero "+dad1+ " El resultados es: "+sumdad1);
+            } else if (sumdad1 < sumdad2) {
+                System.out.println("El dado ganador es el dado numero " +dad2+ " El resultaos es: "+sumdad2);
+            } else {
+                System.out.println("Es un Empate");
+            }
         }
     }
 }
